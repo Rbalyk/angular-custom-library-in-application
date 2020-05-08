@@ -1,0 +1,11 @@
+
+@font-face {
+  font-family: 'Ubuntu-Regular';  src: url('../fonts/Ubuntu-Regular.ttf');  font-weight: 400;  font-style: normal;
+}
+
+@import "variables";
+@import "general";
+
+h1 {
+  background-color: yellow;
+}

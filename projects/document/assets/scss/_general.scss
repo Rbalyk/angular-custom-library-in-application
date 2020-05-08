@@ -1,0 +1,12 @@
+@import "variables";
+
+*{
+  box-sizing: border-box;
+}
+
+p{
+    font-family: $font-regular-400;
+    background-color: green;
+    font-size: 18px;
+    color: #222222;
+  }

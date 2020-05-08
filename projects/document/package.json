@@ -1,0 +1,32 @@
+{
+  "$schema": "../../node_modules/ng-packagr/package.schema.json",
+  "name": "@crosssoft/document",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^9.1.4",
+    "@angular/core": "^9.1.4",
+    "tslib": "^1.10.0"
+  },
+  "dependencies": {
+    "ngx-color": "^4.1.0"
+  },
+  "ngPackage": {
+    "whitelistedNonPeerDependencies": [
+      "ngx-color"
+    ],
+    "assets": [
+      "CHANGELOG.md",
+      "../document/assets/images/*.png",
+      "../document/assets/fonts/*.ttf",
+      "../document/assets/scss/*.scss"
+    ],
+    "lib": {
+      "entryFile": "./src/public-api.ts",
+      "umdModuleIds": {
+        "ngx-color/hue": "hue"
+      },
+      "cssUrl": "inline"
+    },
+    "dest": "../../dist/cs-document-lib"
+  }
+}
