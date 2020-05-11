@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cs-document-lib": {
+    "angular-library": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -12,12 +12,11 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "cs",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cs-document-lib",
+            "outputPath": "dist/angular-library",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cs-document-lib:build"
+            "browserTarget": "angular-library:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cs-document-lib:build:production"
+              "browserTarget": "angular-library:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cs-document-lib:build"
+            "browserTarget": "angular-library:build"
           }
         },
         "test": {
@@ -114,48 +113,47 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cs-document-lib:serve"
+            "devServerTarget": "angular-library:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cs-document-lib:serve:production"
+              "devServerTarget": "angular-library:serve:production"
             }
           }
         }
       }
     },
-    "document": {
+    "library": {
       "projectType": "library",
-      "root": "projects/document",
-      "sourceRoot": "projects/document/src",
-      "prefix": "cs",
+      "root": "projects/library",
+      "sourceRoot": "projects/library/src",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/document/tsconfig.lib.json",
-            "project": "projects/document/ng-package.json"
+            "tsConfig": "projects/library/tsconfig.lib.json",
+            "project": "projects/library/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/document/tsconfig.lib.prod.json"
+              "tsConfig": "projects/library/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/document/src/test.ts",
-            "tsConfig": "projects/document/tsconfig.spec.json",
-            "karmaConfig": "projects/document/karma.conf.js"
+            "main": "projects/library/src/test.ts",
+            "tsConfig": "projects/library/tsconfig.spec.json",
+            "karmaConfig": "projects/library/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/document/tsconfig.lib.json",
-              "projects/document/tsconfig.spec.json"
+              "projects/library/tsconfig.lib.json",
+              "projects/v/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -165,5 +163,5 @@
       }
     }
   },
-  "defaultProject": "cs-document-lib"
+  "defaultProject": "angular-library"
 }

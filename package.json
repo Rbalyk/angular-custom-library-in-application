@@ -1,5 +1,5 @@
 {
-  "name": "cs-document-lib",
+  "name": "angular-library",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,9 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "lib:build": "ng build --prod document",
-    "lib:watch": "ng build --prod document --watch",
-    "lib:publish": "npm run lib:build && cd dist/cs-document-lib && npm pack"
+    "lib:build": "ng build --prod library",
+    "lib:watch": "ng build --prod library --watch",
+    "lib:publish": "npm run lib:build && cd dist/angular-library && npm pack"
   },
   "private": true,
   "dependencies": {
@@ -22,10 +22,10 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
-    "ngx-color": "^5.1.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "@crosssoft/document": "file:./library/angular-library-0.0.1.tgz"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.0",

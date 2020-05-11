@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "@crosssoft/document": [
-        "dist/cs-document-lib/document",
-        "dist/cs-document-lib"
+      "@crosssoft/library": [
+        "dist/angular-library/library",
+        "dist/angular-library"
       ]
     }
   },
